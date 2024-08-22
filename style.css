@@ -1,0 +1,223 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-family: 'Iceberg', sans-serif;
+}
+
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-list li {
+    position: relative;
+}
+
+.navbar-list .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.navbar-list .nav-link:hover, .navbar-list .nav-link.active {
+    background-color: #575757;
+}
+
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Home Page Styles */
+.home-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('Background_01.jpg'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for text visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Iceberg', sans-serif; /* Apply Iceberg font here */
+}
+
+.home-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.auth-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.home-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.home-btn:hover {
+    background-color: #218838;
+}
+
+/* Login/Signup/Profile Page Styles */
+.auth-container, .profile-container {
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 100px auto;
+}
+
+.auth-container h2, .profile-container h2 {
+    margin-bottom: 20px;
+}
+
+/* Centering the form elements */
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items horizontally */
+}
+
+.auth-container form input {
+    width: 100%;
+    max-width: 300px; /* Ensure the input fields are not too wide */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Make padding and border count in width */
+    text-align: center; /* Center text inside the input fields */
+}
+
+.auth-btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+}
+
+.auth-btn:hover {
+    background-color: #0056b3;
+}
+
+.quiz-selection {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.quiz-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+}
+
+.quiz-btn:hover {
+    background-color: #218838;
+}
+
+.hide {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+    }
+
+    .home-btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .auth-container, .profile-container {
+        margin: 50px auto;
+    }
+
+    .navbar-list {
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        transition: max-height 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .navbar-list.show {
+        max-height: 200px;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+}
